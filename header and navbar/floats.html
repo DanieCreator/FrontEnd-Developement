@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floats</title>
+    <style>
+.box-set {
+  background: #eaeaed;
+  /* overflow: hidden; */
+ 
+}
+
+.box-set:before,
+.box-set:after {
+  content: "";
+  display: table;
+}
+.box-set:after {
+  clear: both;
+}
+.box-set {
+  *zoom: 1;
+}
+.box {
+  background: #2db34a;
+  float: left;
+  margin: 1.858736059%;
+  width: 29.615861214%;
+  height: 200px;
+}
+.box-set1 {
+  background: #eaeaed;
+}
+..box-set1 .box {
+  background: #2db34a;
+  height: 80px;
+  position: relative;
+  width: 80px;
+}
+.box-1 {
+  top: 20px;
+}
+.box-2 {
+  left: 40px;
+}
+.box-3 {
+  bottom: -10px;
+  right: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="box-set">
+        <figure class="box">Box 1</figure>
+        <figure class="box">Box 2</figure>
+        <figure class="box">Box 3</figure>
+    </div>
+    <div class="box-set1">
+        <figure class="box box-1">Box 1</figure>
+        <figure class="box box-2">Box 2</figure>
+        <figure class="box box-3">Box 3</figure>
+        <figure class="box box-4">Box 4</figure>
+      </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+</head>
+<style>
+    .container{
+        width: 50%;
+      
+
+    }
+    section,
+aside {
+  margin: 1.858736059%; /*  10px ÷ 538px = .018587361 */
+  background-color: gray;
+  text-align: center;
+}
+section {
+  float: left;
+  width: 63.197026%;    /* 340px ÷ 538px = .63197026 */   
+}
+aside {
+  float: right;
+  width: 29.3680297%;  /* 158px ÷ 538px = .293680297 */
+}
+
+@media all and (min-width: 420px) {
+  .container {
+    max-width: 538px;
+  }
+  section {
+    float: left;
+    width: 63.197026%;
+  }
+  aside {
+    float: right;
+    width: 29.3680297%;
+  }
+}
+</style>
+<body>
+    <div class="container">
+        <section>
+             <h2>Responsive 1</h2>
+        </section>
+        <aside>
+           <h2>Responsive 2</h2>
+        </aside>
+    </div>
+</body>
+</html>

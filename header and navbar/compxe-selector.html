@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        input{
+            display: none;
+        }
+        label, ul{
+            border: 1px solid #cecfd5;
+            border-radius: 6px;
+        }
+        label{
+            color: #0087cc;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 18px;
+            padding: 5px 9px;
+            transition: all .15s ease;
+        }
+        label:hover{
+            color: #ff7b29;
+        }
+        input:checked + label{
+            box-shadow: inset 0 1px 2px rgba(0,0,0,.15);
+            color: #9799a7;
+        }
+        nav{
+            max-height: 0;
+            overflow: hidden;
+            transition: all .15s ease;
+        }
+        input:checked ~ nav{
+            max-height: 500px;
+        }
+        ul{
+            list-style: none;
+            margin: 8px, 0, 0, 0;
+            padding: 0;
+            width: 100px;
+        }
+        li{
+            border-bottom: 1px solid #cecfd5;
+        }
+        li:last-child{
+            border-bottom: 0;
+        }
+        a{
+            color: #0087cc;
+            display: block;
+            padding: 6px 12px;
+            text-decoration: none;
+        }
+        a:hover{
+            color: #ff7b29;
+        }
+     div ~ p{
+            background-color: green;
+        }
+        section ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            background-position: 0 50%;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+    <label for="toggle">&#9776</label>
+    <nav>
+     <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+     </ul>
+    </nav>
+    <p> Here's my Take</p>
+<section>
+  <p>The Blosom in the bud</p>
+  <h2>Junior Training</h2>
+  <p>This paragraph will be selected</p>
+  <div>
+    <p>Get Lazy, get thrown out</p>
+  </div>
+  <p>This paragraph will be selected</p>
+</section>
+
+<section>
+    <ul>
+        <li><a href="#.pdf">PDF Document</a></li>
+        <li><a href="#.doc">Word Document</a></li>
+        <li><a href="#.jpg">Image File</a></li>
+        <li><a href="#.mp3">Audio File</a></li>
+        <li><a href="#.mp4">Video File</a></li>
+      </ul>
+</section>
+</body>
+</html>
