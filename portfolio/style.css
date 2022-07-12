@@ -1,0 +1,204 @@
+:root{
+    --bg-color:#3F3351;
+    --navbg-color:#1F1D36;
+    --btn-color:#864879;
+    --hover-color:#E9A6A6;
+    --text-color: white;
+    --sans: Oxygen ,sans-seriff;
+    --mono:"Oxygen mono", monospace;
+    --font-size:1.5rem;
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+
+
+}
+html{
+    box-sizing: border-box;
+   
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: var(--sans);
+    
+    color: var(--white);
+    font-size: var(--font-size);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav{
+    background-color: var(--navbg-color);
+    color: var(--text-color);
+    padding: 1rem;
+    font-size: 80%;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+   
+  }
+nav a{
+   color: var(--text-color);
+   text-decoration: none;
+   display: block;
+}
+nav a:hover{
+    color: var(--hover-color);
+}
+nav li:first-child{
+    flex-basis: 100%;
+    text-align: center;
+    
+}
+nav[class*="fa-"]:hover{
+    color: var(--hover-color);
+}
+.button{
+    background-color: var(--magenta);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.button:hover{
+    color: aqua;
+}
+img{
+    width: 100%;
+}
+
+/* styling the intro section*/
+#intro{
+ align-items: center;
+ justify-content: center;
+ padding-bottom: 10rem;
+ display: flex;
+ padding-top: 1rem;
+}
+#intro div{
+    padding-right: 2rem;
+}
+#intro *p{
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-top: 1rem;
+    
+}
+#intro p{
+padding-top: 1rem;
+}
+#intro span{
+    font-size: 3rem;
+    color: aqua;
+    display: block;
+    font-family: 'Oxygen Mono', monospace;
+}
+#intro h2{
+    font-size: 4rem ;
+    font-weight: normal;
+    padding: 1rem;
+}
+
+#project{
+    padding: 4rem 1rem;
+
+
+}
+#project h2{
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem*1.5);
+
+}
+#project h3{
+    color: aqua;
+
+}
+#project h4{
+    font-size: 1rem;
+    font-family: var(--mono);
+   
+}
+#project .description{
+    background-color: var(--black);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    line-height: 1.5;
+
+}
+#project img{
+    margin: 2rem 0 4rem 0;
+    border-top: 1px solid aqua;
+    border-left: 1px solid aqua;
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+/* contact section */
+
+#contact {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+  
+  #contact p:last-child {
+    margin-top: 3rem;
+  }
+  footer{
+    text-align: center;
+    padding: 4rem;
+  }
+  footer ul{
+ margin: 2rem 0;
+ padding: 0;
+  }
+
+  @media(min-width:850px){
+    nav{
+        max-width: 1200px;
+        margin: 0 auto;
+
+    }
+    nav li:first-child{
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+  }
+  @media(min-width:550px){
+        article{
+            display: grid;
+            grid-template-columns: repeat(10,1fr);
+            gap: 1rem;
+        }
+        #project img{
+            grid-column: 1/6;
+            grid-row: 1/2;
+        }
+        .text{
+            order: 2;
+            text-align: right;
+            grid-row: 1/2;
+            grid-column: 4/11;
+            padding-top: 2rem;
+        }
+        #project ul{
+         justify-content: flex-end;
+        }
+  }
+
+  #project:nth-child(2) .text{
+    order: 1;
+  } 
